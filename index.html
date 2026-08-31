@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="card-collection: fifteen professional customizable card UI demos built with HTML, CSS, and vanilla JavaScript.">
+  <title>card-collection</title>
+  <link rel="stylesheet" href="./assets/main.css">
+  <script src="./assets/main.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <nav class="nav">
+      <a class="brand" href="./index.html"><span class="brand-mark"></span><span>card-collection</span></a>
+      <div class="nav-links">
+        <a href="./docs/index.html">Documentation</a>
+        <a href="./CONTRIBUTING.md">Contributing</a>
+        <a href="./SECURITY.md">Security</a>
+        <a href="./LICENSE">License</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Reusable card design laboratory</p>
+        <h1>Cards people can actually build with.</h1>
+        <p class="hero-copy">
+          Fifteen fully customizable card demos covering finance, identity, commerce,
+          travel, dashboards, productivity, social profiles, pricing, and products.
+          Every sample includes independent HTML, CSS, JavaScript, documentation,
+          color schemes, typography controls, motion, flip behavior, responsive rules,
+          import and export, and a professional integration guide.
+        </p>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>Samples</span><strong>15</strong></div>
+        <div class="stat"><span>Frameworks</span><strong>0</strong></div>
+        <div class="stat"><span>License</span><strong>MIT</strong></div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search credit, product, ticket, profile..." aria-label="Search card collection">
+      </div>
+      <select class="filter" id="categoryFilter" aria-label="Filter by category">
+        <option value="all">All categories</option>
+        <option value="finance">Finance</option>
+        <option value="identity">Identity</option>
+        <option value="commerce">Commerce</option>
+        <option value="travel">Travel and hospitality</option>
+        <option value="web">Web UI</option>
+      </select>
+    </div>
+
+    <p style="color:var(--muted);margin:0 0 16px"><strong id="visibleCount">15</strong> demos visible</p>
+
+    <section class="grid" aria-label="Card demos">
+      
+      <a class="demo-card" data-demo-card data-title="Credit Card" data-tags="Premium banking card with chip, masked number, holder details, network mark, flip-to-back CVV area. finance Physical UI" data-category="finance" href="cards/01-credit-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">01</span>
+            <span class="tag">Physical UI</span>
+          </div>
+          <h2>Credit Card</h2>
+          <p>Premium banking card with chip, masked number, holder details, network mark, flip-to-back CVV area.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Debit Card" data-tags="Everyday debit card with account tier, transaction status, secure contactless styling, and reverse details. finance Physical UI" data-category="finance" href="cards/02-debit-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">02</span>
+            <span class="tag">Physical UI</span>
+          </div>
+          <h2>Debit Card</h2>
+          <p>Everyday debit card with account tier, transaction status, secure contactless styling, and reverse details.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Business Card" data-tags="Professional identity card with role, contact information, company details, QR-inspired visual block, and alternate reverse. identity Identity" data-category="identity" href="cards/03-business-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">03</span>
+            <span class="tag">Identity</span>
+          </div>
+          <h2>Business Card</h2>
+          <p>Professional identity card with role, contact information, company details, QR-inspired visual block, and alternate reverse.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Membership Card" data-tags="Club membership card with tier, member ID, expiry, benefits, and premium visual hierarchy. identity Identity" data-category="identity" href="cards/04-membership-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">04</span>
+            <span class="tag">Identity</span>
+          </div>
+          <h2>Membership Card</h2>
+          <p>Club membership card with tier, member ID, expiry, benefits, and premium visual hierarchy.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="ID Profile Card" data-tags="Modern staff or student identification card with avatar, verified status, department, and emergency detail reverse. identity Identity" data-category="identity" href="cards/05-id-profile-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">05</span>
+            <span class="tag">Identity</span>
+          </div>
+          <h2>ID Profile Card</h2>
+          <p>Modern staff or student identification card with avatar, verified status, department, and emergency detail reverse.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Loyalty Card" data-tags="Rewards card with points, progress, tier, next milestone, and a scannable visual area. commerce Commerce" data-category="commerce" href="cards/06-loyalty-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">06</span>
+            <span class="tag">Commerce</span>
+          </div>
+          <h2>Loyalty Card</h2>
+          <p>Rewards card with points, progress, tier, next milestone, and a scannable visual area.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Gift Card" data-tags="Digital gift card with balance, recipient, message, redemption code, and celebratory motion. commerce Commerce" data-category="commerce" href="cards/07-gift-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">07</span>
+            <span class="tag">Commerce</span>
+          </div>
+          <h2>Gift Card</h2>
+          <p>Digital gift card with balance, recipient, message, redemption code, and celebratory motion.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Event Ticket Card" data-tags="Event admission card with venue, date, seat, ticket status, barcode-like detail, and animated tear line. travel Ticket" data-category="travel" href="cards/08-event-ticket-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">08</span>
+            <span class="tag">Ticket</span>
+          </div>
+          <h2>Event Ticket Card</h2>
+          <p>Event admission card with venue, date, seat, ticket status, barcode-like detail, and animated tear line.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Boarding Pass" data-tags="Flight boarding pass with route, gate, seat, boarding time, barcode pattern, and compact travel hierarchy. travel Travel" data-category="travel" href="cards/09-boarding-pass-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">09</span>
+            <span class="tag">Travel</span>
+          </div>
+          <h2>Boarding Pass</h2>
+          <p>Flight boarding pass with route, gate, seat, boarding time, barcode pattern, and compact travel hierarchy.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Hotel Key Card" data-tags="Hospitality key card with guest name, room, stay dates, access zones, and elegant reverse instructions. travel Hospitality" data-category="travel" href="cards/10-hotel-key-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">10</span>
+            <span class="tag">Hospitality</span>
+          </div>
+          <h2>Hotel Key Card</h2>
+          <p>Hospitality key card with guest name, room, stay dates, access zones, and elegant reverse instructions.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Pricing Card" data-tags="SaaS pricing card with plan title, price, feature list, CTA, badge, hover depth, and theme controls. web Web UI" data-category="web" href="cards/11-pricing-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">11</span>
+            <span class="tag">Web UI</span>
+          </div>
+          <h2>Pricing Card</h2>
+          <p>SaaS pricing card with plan title, price, feature list, CTA, badge, hover depth, and theme controls.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Product Card" data-tags="E-commerce product card with visual product stage, rating, price, variants, favorite state, and purchase CTA. web Web UI" data-category="web" href="cards/12-product-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">12</span>
+            <span class="tag">Web UI</span>
+          </div>
+          <h2>Product Card</h2>
+          <p>E-commerce product card with visual product stage, rating, price, variants, favorite state, and purchase CTA.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Dashboard Stat Card" data-tags="Analytics KPI card with metric, delta, micro chart, target status, and density controls. web Dashboard" data-category="web" href="cards/13-dashboard-stat-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">13</span>
+            <span class="tag">Dashboard</span>
+          </div>
+          <h2>Dashboard Stat Card</h2>
+          <p>Analytics KPI card with metric, delta, micro chart, target status, and density controls.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Project Card" data-tags="Project management card with status, progress, members, priority, due date, tags, and quick actions. web Productivity" data-category="web" href="cards/14-project-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">14</span>
+            <span class="tag">Productivity</span>
+          </div>
+          <h2>Project Card</h2>
+          <p>Project management card with status, progress, members, priority, due date, tags, and quick actions.</p>
+        </div>
+      </a>
+      <a class="demo-card" data-demo-card data-title="Social Profile Card" data-tags="Creator profile card with identity, role, stats, links, follow state, visual banner, and compact responsive mode. web Social" data-category="web" href="cards/15-social-profile-card/index.html">
+        <div class="preview" aria-hidden="true"></div>
+        <div>
+          <div class="meta">
+            <span class="tag">15</span>
+            <span class="tag">Social</span>
+          </div>
+          <h2>Social Profile Card</h2>
+          <p>Creator profile card with identity, role, stats, links, follow state, visual banner, and compact responsive mode.</p>
+        </div>
+      </a>
+    </section>
+
+    <section class="section-title">
+      <h2>Designed like a real open-source UI project.</h2>
+      <p>
+        The repository includes technical documentation, a contribution workflow,
+        security guidance, issue templates, a pull-request template, changelog,
+        roadmap, code of conduct, style guidance, and an automated verifier.
+      </p>
+    </section>
+
+    <footer class="footer">
+      Built with standards-based HTML, CSS, and JavaScript. No framework, API key,
+      paid service, or build step is required for the demos.
+    </footer>
+  </main>
+</body>
+</html>

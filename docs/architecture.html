@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Architecture | card-collection</title>
+  <link rel="stylesheet" href="./docs.css">
+</head>
+<body>
+  <main class="docs-layout">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">card-collection</a>
+      <nav class="nav-list"><a class="" href="./index.html">Overview</a>
+<a class="" href="./customization.html">Customization</a>
+<a class="" href="./performance.html">Performance</a>
+<a class="active" href="./architecture.html">Architecture</a>
+<a class="" href="./contributing.html">Contributing</a>
+<a class="" href="./accessibility.html">Accessibility</a>
+<a class="" href="./security.html">Security</a></nav>
+    </aside>
+    <article class="doc">
+      <header class="doc-header">
+        <div class="eyebrow">Engineering</div>
+        <h1>Architecture</h1>
+        <p class="lead">The repository separates gallery concerns, shared studio behavior, and individual card markup so designers can explore quickly without sacrificing maintainability.</p>
+      </header>
+      
+<h2>Top-level architecture</h2>
+<pre><code>card-collection/
+├── assets/
+│   ├── main.css
+│   ├── main.js
+│   └── card-lab.js
+├── cards/
+│   └── 15 independent demos
+├── docs/
+├── scripts/
+└── .github/</code></pre>
+
+<h2>Shared runtime</h2>
+<p><code>assets/card-lab.js</code> owns design presets, CSS variable application, flip state, tilt interpolation, import and export, local preset persistence, keyboard behavior, and configuration methods.</p>
+
+<h2>Individual demos</h2>
+<p>Each demo owns its semantic content and any domain-specific visual structure. This prevents one giant conditional component from becoming the only way to understand or reuse the project.</p>
+
+<h2>Why vanilla JavaScript</h2>
+<p>There is no framework requirement because the project is intended as transferable source material. A React, Vue, Svelte, EJS, or server-rendered project can adopt the markup and tokens without first removing a framework abstraction.</p>
+
+    </article>
+  </main>
+</body>
+</html>

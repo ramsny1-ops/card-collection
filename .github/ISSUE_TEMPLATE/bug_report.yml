@@ -1,0 +1,48 @@
+name: Bug report
+description: Report a reproducible problem in a card demo or repository tooling.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: card
+    attributes:
+      label: Affected area
+      options:
+        - Gallery
+        - Shared card studio
+        - Credit Card
+        - Debit Card
+        - Business Card
+        - Membership Card
+        - ID Profile Card
+        - Loyalty Card
+        - Gift Card
+        - Event Ticket Card
+        - Boarding Pass
+        - Hotel Key Card
+        - Pricing Card
+        - Product Card
+        - Dashboard Stat Card
+        - Project Card
+        - Social Profile Card
+        - Documentation
+        - Verification tooling
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Explain exactly how to reproduce the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version

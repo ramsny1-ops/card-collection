@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Performance | card-collection</title>
+  <link rel="stylesheet" href="./docs.css">
+</head>
+<body>
+  <main class="docs-layout">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">card-collection</a>
+      <nav class="nav-list"><a class="" href="./index.html">Overview</a>
+<a class="" href="./customization.html">Customization</a>
+<a class="active" href="./performance.html">Performance</a>
+<a class="" href="./architecture.html">Architecture</a>
+<a class="" href="./contributing.html">Contributing</a>
+<a class="" href="./accessibility.html">Accessibility</a>
+<a class="" href="./security.html">Security</a></nav>
+    </aside>
+    <article class="doc">
+      <header class="doc-header">
+        <div class="eyebrow">Engineering</div>
+        <h1>Performance</h1>
+        <p class="lead">The project intentionally avoids large animation libraries and component frameworks. Most effects are CSS-driven, with one small interpolation loop for pointer tilt.</p>
+      </header>
+      
+<h2>Runtime profile</h2>
+<p>The shared card runtime performs no network calls and does not continuously mutate layout-heavy properties. Pointer tilt writes transform-related CSS variables and uses requestAnimationFrame for smooth interpolation.</p>
+
+<h2>Disable features you do not need</h2>
+<pre><code>window.cardCollectionDemo.setConfig({
+  tiltEnabled: false,
+  motion: "none"
+});</code></pre>
+
+<h2>Prefer transforms</h2>
+<p>Scale, tilt, and flip are implemented using transforms. Avoid animating dimensions, margins, or properties that force repeated layout when creating additional effects.</p>
+
+<h2>Reduced motion</h2>
+<p>The CSS disables non-essential animation when the browser reports <code>prefers-reduced-motion: reduce</code>. Keep that behavior when porting a demo into another application.</p>
+
+<h2>Production checklist</h2>
+<ul>
+<li>Remove demo controls if users do not need runtime editing.</li>
+<li>Disable pointer tilt on dense dashboards or low-power surfaces if it adds no value.</li>
+<li>Use system fonts unless brand typography is already loaded.</li>
+<li>Keep decorative backgrounds CSS-based where possible.</li>
+<li>Test at narrow mobile widths before publishing.</li>
+</ul>
+
+    </article>
+  </main>
+</body>
+</html>

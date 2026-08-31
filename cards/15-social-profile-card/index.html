@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Creator profile card with identity, role, stats, links, follow state, visual banner, and compact responsive mode.">
+  <title>Social Profile Card | card-collection</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./script.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="back" href="../../index.html">Back to collection</a>
+      <h1>Social Profile Card</h1>
+    </header>
+
+    <div class="workspace">
+      <section class="stage" aria-label="Social Profile Card live preview">
+        <div class="card-scene" id="cardScene">
+          
+        <div class="card-face" id="cardFront">
+          <div class="card-gloss"></div><div class="decor-line one"></div><div class="decor-line two"></div><div class="decor-ring"></div><div class="decor-block"></div><div class="card-content">
+            <div style="height:108px;border-radius:20px;background:linear-gradient(135deg,var(--card-accent),transparent),linear-gradient(45deg,rgba(255,255,255,.1),transparent)"></div>
+            <div class="card-row"><div><div class="card-kicker">Creator profile</div><h2 class="card-title" data-card-title>Social Profile Card</h2><p class="card-subtitle" data-card-subtitle>Designer, developer, and creative technologist</p></div><span class="brand-badge">FOLLOW</span></div>
+            <div class="card-meta-grid"><div><span>Followers</span><strong>18.4K</strong></div><div><span>Projects</span><strong>127</strong></div><div><span>Reach</span><strong>1.2M</strong></div></div>
+          </div>
+        </div>
+        <div class="card-face card-back" id="cardBack">
+          <div class="card-gloss"></div><div class="decor-line one"></div><div class="decor-line two"></div><div class="decor-ring"></div><div class="decor-block"></div><div class="card-content">
+            <div><div class="card-kicker">Links</div><h2 class="card-title">@creative.dev</h2></div>
+            <div class="card-meta-grid"><div><span>GitHub</span><strong>@creative</strong></div><div><span>Website</span><strong>portfolio.dev</strong></div><div><span>Location</span><strong>Dar es Salaam</strong></div></div>
+            <p class="card-subtitle">Adapt this card for authors, creators, teams, communities, or personal portfolios.</p>
+          </div>
+        </div>
+        
+        </div>
+      </section>
+
+      
+      <aside class="panel">
+        <div class="panel-header">
+          <h2>Card Studio</h2>
+          <p>Change content, typography, palette, geometry, motion, flip behavior, and exportable CSS variables in real time.</p>
+        </div>
+
+        <section class="section">
+          <h3>Content</h3>
+          <div class="field">
+            <label for="titleInput">Title</label>
+            <input id="titleInput" maxlength="48">
+          </div>
+          <div class="field">
+            <label for="subtitleInput">Subtitle</label>
+            <textarea id="subtitleInput" maxlength="140"></textarea>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Color scheme</h3>
+          <div class="field">
+            <label for="preset">Preset</label>
+            <select id="preset">
+              <option value="midnight">Midnight</option>
+              <option value="emerald">Emerald</option>
+              <option value="graphite">Graphite</option>
+              <option value="royal">Royal</option>
+              <option value="sunrise">Sunrise</option>
+              <option value="ocean">Ocean</option>
+              <option value="monochrome">Monochrome</option>
+            </select>
+          </div>
+          <div class="field field-inline">
+            <label for="primaryColor">Primary surface</label>
+            <input id="primaryColor" type="color">
+          </div>
+          <div class="field field-inline">
+            <label for="secondaryColor">Secondary surface</label>
+            <input id="secondaryColor" type="color">
+          </div>
+          <div class="field field-inline">
+            <label for="textColor">Text</label>
+            <input id="textColor" type="color">
+          </div>
+          <div class="field field-inline">
+            <label for="accentColor">Accent</label>
+            <input id="accentColor" type="color">
+          </div>
+          <div class="field field-inline">
+            <label for="pageColor">Page background</label>
+            <input id="pageColor" type="color">
+          </div>
+        </section>
+
+        
+        <section class="section">
+          <h3>Advanced surfaces</h3>
+          <div class="field field-inline">
+            <label for="backPrimaryColor">Back primary</label>
+            <input id="backPrimaryColor" type="color">
+          </div>
+          <div class="field field-inline">
+            <label for="backSecondaryColor">Back secondary</label>
+            <input id="backSecondaryColor" type="color">
+          </div>
+          <div class="field field-inline">
+            <label for="accentColor2">Secondary accent</label>
+            <input id="accentColor2" type="color">
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Pattern engine</h3>
+          <div class="field">
+            <label for="patternSelect">Pattern type</label>
+            <select id="patternSelect">
+              <option value="none">None</option>
+              <option value="diagonal">Diagonal lines</option>
+              <option value="cross">Cross hatch</option>
+              <option value="grid">Grid</option>
+              <option value="dots">Dot matrix</option>
+              <option value="circuit">Circuit</option>
+              <option value="rings">Concentric rings</option>
+              <option value="waves">Wave bands</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="patternSizeRange">Pattern scale</label>
+            <div class="range-row">
+              <input id="patternSizeRange" type="range" min="40" max="420" step="1">
+              <output id="patternSizeValue"></output>
+            </div>
+          </div>
+          <div class="field">
+            <label for="patternAngleRange">Pattern angle</label>
+            <div class="range-row">
+              <input id="patternAngleRange" type="range" min="0" max="360" step="1">
+              <output id="patternAngleValue"></output>
+            </div>
+          </div>
+          <div class="field">
+            <label for="patternGapRange">Line spacing</label>
+            <div class="range-row">
+              <input id="patternGapRange" type="range" min="6" max="80" step="1">
+              <output id="patternGapValue"></output>
+            </div>
+          </div>
+          <div class="field">
+            <label for="patternLineWidthRange">Line thickness</label>
+            <div class="range-row">
+              <input id="patternLineWidthRange" type="range" min="0.2" max="6" step="0.1">
+              <output id="patternLineWidthValue"></output>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Depth and lighting</h3>
+          <div class="field">
+            <label for="borderWidthRange">Border strength</label>
+            <div class="range-row">
+              <input id="borderWidthRange" type="range" min="0" max="6" step="0.1">
+              <output id="borderWidthValue"></output>
+            </div>
+          </div>
+          <div class="field">
+            <label for="shadowStrengthRange">Shadow depth</label>
+            <div class="range-row">
+              <input id="shadowStrengthRange" type="range" min="0" max="0.8" step="0.01">
+              <output id="shadowStrengthValue"></output>
+            </div>
+          </div>
+          <div class="field">
+            <label for="glassOpacityRange">Glass layer</label>
+            <div class="range-row">
+              <input id="glassOpacityRange" type="range" min="0" max="0.3" step="0.01">
+              <output id="glassOpacityValue"></output>
+            </div>
+          </div>
+          <div class="field">
+            <label for="glossOpacityRange">Gloss highlight</label>
+            <div class="range-row">
+              <input id="glossOpacityRange" type="range" min="0" max="0.5" step="0.01">
+              <output id="glossOpacityValue"></output>
+            </div>
+          </div>
+          <div class="field">
+            <label for="spotlightOpacityRange">Spotlight</label>
+            <div class="range-row">
+              <input id="spotlightOpacityRange" type="range" min="0" max="0.4" step="0.01">
+              <output id="spotlightOpacityValue"></output>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Micro grid</h3>
+          <div class="field">
+            <label for="gridOpacityRange">Grid opacity</label>
+            <div class="range-row">
+              <input id="gridOpacityRange" type="range" min="0" max="0.3" step="0.01">
+              <output id="gridOpacityValue"></output>
+            </div>
+          </div>
+          <div class="field">
+            <label for="gridSizeRange">Grid spacing</label>
+            <div class="range-row">
+              <input id="gridSizeRange" type="range" min="8" max="80" step="1">
+              <output id="gridSizeValue"></output>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Preview environment</h3>
+          <div class="field">
+            <label for="stageSelect">Stage background</label>
+            <select id="stageSelect">
+              <option value="grid">Technical grid</option>
+              <option value="dots">Dot field</option>
+              <option value="spotlight">Spotlight</option>
+              <option value="lines">Diagonal lines</option>
+              <option value="plain">Plain dark</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Typography and geometry</h3>
+          <div class="field">
+            <label for="fontSelect">Font system</label>
+            <select id="fontSelect">
+              <option value="system">Modern Sans</option>
+              <option value="mono">Technical Mono</option>
+              <option value="serif">Editorial Serif</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="radiusRange">Corner radius</label>
+            <div class="range-row">
+              <input id="radiusRange" type="range" min="8" max="60" step="1">
+              <output id="radiusValue"></output>
+            </div>
+          </div>
+          <div class="field">
+            <label for="scaleRange">Scale</label>
+            <div class="range-row">
+              <input id="scaleRange" type="range" min="0.82" max="1.12" step="0.01">
+              <output id="scaleValue"></output>
+            </div>
+          </div>
+          <div class="field">
+            <label for="patternRange">Background pattern</label>
+            <div class="range-row">
+              <input id="patternRange" type="range" min="0" max="0.4" step="0.01">
+              <output id="patternValue"></output>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Motion</h3>
+          <div class="field">
+            <label for="motionSelect">Animation</label>
+            <select id="motionSelect">
+              <option value="none">None</option>
+              <option value="float">Floating</option>
+              <option value="pulse">Pulse edge</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="durationRange">Motion duration</label>
+            <div class="range-row">
+              <input id="durationRange" type="range" min="120" max="2000" step="10">
+              <output id="durationValue"></output>
+            </div>
+          </div>
+          <div class="toggle">
+            <input id="flipEnabled" type="checkbox">
+            <label for="flipEnabled">Enable flip interaction</label>
+          </div>
+          <div class="toggle" style="margin-top:10px">
+            <input id="tiltEnabled" type="checkbox">
+            <label for="tiltEnabled">Enable pointer tilt</label>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Actions</h3>
+          <div class="actions">
+            <button class="primary" id="flipButton" type="button">Flip card</button>
+            <button id="resetButton" type="button">Reset</button>
+            <button id="randomButton" type="button">Randomize</button>
+            <button id="copyCssButton" type="button">Copy CSS variables</button>
+            <button id="exportButton" type="button">Export JSON</button>
+            <button id="saveButton" type="button">Save locally</button>
+            <button id="loadButton" type="button">Load saved</button>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Import and export</h3>
+          <div class="field">
+            <label for="importArea">Configuration JSON or exported CSS</label>
+            <textarea id="importArea" placeholder='{"cardAccent":"#8b7bff"}'></textarea>
+          </div>
+          <button id="importButton" type="button">Import JSON</button>
+        </section>
+
+        <section class="section">
+          <h3>Runtime status</h3>
+          <div class="status">
+            <div><span>Theme</span><strong id="statusTheme">midnight</strong></div>
+            <div><span>Motion</span><strong id="statusMotion">none</strong></div>
+            <div><span>Face</span><strong id="statusFlip">Front</strong></div>
+            <div><span>Preset storage</span><strong id="statusStorage">Empty</strong></div>
+          </div>
+        </section>
+      </aside>
+
+    </div>
+  </main>
+</body>
+</html>

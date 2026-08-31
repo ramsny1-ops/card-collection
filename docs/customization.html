@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customization | card-collection</title>
+  <link rel="stylesheet" href="./docs.css">
+</head>
+<body>
+  <main class="docs-layout">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">card-collection</a>
+      <nav class="nav-list"><a class="" href="./index.html">Overview</a>
+<a class="active" href="./customization.html">Customization</a>
+<a class="" href="./performance.html">Performance</a>
+<a class="" href="./architecture.html">Architecture</a>
+<a class="" href="./contributing.html">Contributing</a>
+<a class="" href="./accessibility.html">Accessibility</a>
+<a class="" href="./security.html">Security</a></nav>
+    </aside>
+    <article class="doc">
+      <header class="doc-header">
+        <div class="eyebrow">Design system</div>
+        <h1>Customization</h1>
+        <p class="lead">Use live controls for exploration, then export stable CSS variables or JSON configuration into your application.</p>
+      </header>
+      
+<h2>Core CSS tokens</h2>
+<pre><code>:root {
+  --card-bg: #171a20;
+  --card-bg-2: #0f1116;
+  --card-text: #ffffff;
+  --card-accent: #8b7bff;
+  --card-radius: 26px;
+  --card-scale: 1;
+  --pattern-opacity: .16;
+  --motion-duration: 650ms;
+}</code></pre>
+
+<h2>Programmatic configuration</h2>
+<pre><code>window.cardCollectionDemo.setConfig({
+  cardBg: "#0d241c",
+  cardBg2: "#07130f",
+  cardAccent: "#58d68d",
+  radius: 32,
+  scale: 1.02,
+  pattern: 0.14,
+  motion: "float",
+  tiltEnabled: true,
+  flipEnabled: true
+});</code></pre>
+
+<h2>Preset system</h2>
+<p>The shared runtime contains Midnight, Emerald, Graphite, Royal, and Sunrise presets. Presets are ordinary JavaScript objects, so adding your own theme is straightforward.</p>
+
+<h2>Title hierarchy</h2>
+<p>Use the card title for the main identity of the card. The kicker should communicate context such as plan type, category, status, route, or organization. Supporting text should explain rather than repeat the title.</p>
+
+<h2>Background and pattern</h2>
+<p>The card background uses two surfaces and a lightweight CSS pattern. Pattern opacity should normally remain subtle. Strong pattern contrast can reduce readability and make the design feel decorative rather than purposeful.</p>
+
+<h2>Flip behavior</h2>
+<p>Flip should reveal secondary information rather than hide information required for the first decision. The front should remain useful by itself.</p>
+
+    
+<h2>Advanced pattern engine</h2>
+<p>Every card now supports multiple pattern families: diagonal lines, cross hatch, technical grid, dot matrix, circuit blocks, concentric rings, and wave bands. Pattern scale, angle, spacing, thickness, and opacity can all be adjusted independently.</p>
+
+<pre><code>window.cardCollectionDemo.setConfig({
+  patternType: "circuit",
+  patternSize: 180,
+  patternAngle: 115,
+  patternGap: 22,
+  patternLineWidth: 1.2,
+  pattern: 0.18
+});</code></pre>
+
+<h2>Front and back surfaces</h2>
+<p>The reverse face no longer has to inherit the front palette. Use independent back-surface colors for stronger identity and clearer information separation.</p>
+
+<pre><code>window.cardCollectionDemo.setConfig({
+  cardBg: "#241a3a",
+  cardBg2: "#100b1c",
+  cardBackBg: "#0b1a14",
+  cardBackBg2: "#050c09",
+  cardAccent: "#a58cff",
+  cardAccent2: "#58d68d"
+});</code></pre>
+
+<h2>Lighting and depth</h2>
+<p>Border width, shadow strength, glass layer opacity, gloss strength, spotlight intensity, micro-grid opacity, and grid scale are all exposed as first-class design controls.</p>
+
+<pre><code>window.cardCollectionDemo.setConfig({
+  borderWidth: 1.4,
+  shadowStrength: 0.42,
+  glassOpacity: 0.08,
+  glossOpacity: 0.22,
+  spotlightOpacity: 0.18,
+  gridOpacity: 0.07,
+  gridSize: 28
+});</code></pre>
+
+<h2>Preview environments</h2>
+<p>The demo stage can switch between technical grid, dot field, spotlight, diagonal lines, and plain dark environments. This helps evaluate whether a card still reads clearly outside a single presentation background.</p>
+
+    </article>
+  </main>
+</body>
+</html>

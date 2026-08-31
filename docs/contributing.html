@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contributing | card-collection</title>
+  <link rel="stylesheet" href="./docs.css">
+</head>
+<body>
+  <main class="docs-layout">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">card-collection</a>
+      <nav class="nav-list"><a class="" href="./index.html">Overview</a>
+<a class="" href="./customization.html">Customization</a>
+<a class="" href="./performance.html">Performance</a>
+<a class="" href="./architecture.html">Architecture</a>
+<a class="active" href="./contributing.html">Contributing</a>
+<a class="" href="./accessibility.html">Accessibility</a>
+<a class="" href="./security.html">Security</a></nav>
+    </aside>
+    <article class="doc">
+      <header class="doc-header">
+        <div class="eyebrow">Open source</div>
+        <h1>Contributing</h1>
+        <p class="lead">Contributions should improve both the visual result and the quality of the source code. A card is not complete until its documentation, responsive behavior, and verification checks are also complete.</p>
+      </header>
+      
+<h2>Before opening a pull request</h2>
+<pre><code>npm run verify</code></pre>
+
+<h2>New card checklist</h2>
+<ul>
+<li>Create a numbered folder under <code>cards/</code>.</li>
+<li>Add <code>index.html</code>, <code>style.css</code>, <code>script.js</code>, and <code>README.md</code>.</li>
+<li>Use the shared card studio unless the demo genuinely requires different interaction.</li>
+<li>Add the card to the root gallery.</li>
+<li>Document customization and integration.</li>
+<li>Test keyboard interaction and reduced motion.</li>
+<li>Use fictional data only.</li>
+</ul>
+
+<h2>Code quality</h2>
+<p>Prefer readable names, small functions, semantic HTML, CSS variables, and platform APIs. Avoid adding a dependency for something the browser already provides cleanly.</p>
+
+<h2>Visual quality</h2>
+<p>A contribution should feel intentional at 320 pixels wide as well as on desktop. Avoid excessive gradients, gratuitous glow, weak contrast, or controls that exist only to decorate the demo.</p>
+
+    </article>
+  </main>
+</body>
+</html>

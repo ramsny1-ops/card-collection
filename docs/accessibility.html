@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibility | card-collection</title>
+  <link rel="stylesheet" href="./docs.css">
+</head>
+<body>
+  <main class="docs-layout">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">card-collection</a>
+      <nav class="nav-list"><a class="" href="./index.html">Overview</a>
+<a class="" href="./customization.html">Customization</a>
+<a class="" href="./performance.html">Performance</a>
+<a class="" href="./architecture.html">Architecture</a>
+<a class="" href="./contributing.html">Contributing</a>
+<a class="active" href="./accessibility.html">Accessibility</a>
+<a class="" href="./security.html">Security</a></nav>
+    </aside>
+    <article class="doc">
+      <header class="doc-header">
+        <div class="eyebrow">Quality</div>
+        <h1>Accessibility</h1>
+        <p class="lead">The collection treats accessibility as part of design quality rather than a final patch.</p>
+      </header>
+      
+<h2>Motion</h2>
+<p>Non-essential animation respects reduced-motion preferences. Flip and pointer tilt should never be required to access essential information.</p>
+
+<h2>Controls</h2>
+<p>The customization studio uses native inputs, selects, textareas, and buttons with visible labels. Keep native semantics when extending the controls.</p>
+
+<h2>Contrast</h2>
+<p>Custom color controls allow combinations that may not meet contrast targets. Production products should validate brand palettes before exposing them to end users.</p>
+
+<h2>Responsive layout</h2>
+<p>Card content is designed to wrap rather than overflow. Test long names, translated labels, and large browser text sizes.</p>
+
+    </article>
+  </main>
+</body>
+</html>

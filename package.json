@@ -1,0 +1,26 @@
+{
+  "name": "card-collection",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Fifteen production-minded, customizable card UI demos built with HTML, CSS, and vanilla JavaScript.",
+  "scripts": {
+    "serve": "python3 -m http.server 4173",
+    "verify": "node scripts/verify.mjs"
+  },
+  "keywords": [
+    "cards",
+    "ui",
+    "css",
+    "javascript",
+    "html",
+    "design-system",
+    "credit-card",
+    "product-card",
+    "pricing-card",
+    "profile-card",
+    "creative-coding",
+    "frontend"
+  ],
+  "license": "MIT"
+}
